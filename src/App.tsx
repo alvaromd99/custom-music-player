@@ -2,7 +2,14 @@ import './App.css'
 
 function App() {
   return (
-    <>Hello</>
+    <>
+      <section className='h-screen'>
+        <img src='./images/logo.jpeg' />
+        <div>
+
+        </div>
+      </section>
+    </>
   )
 }
 
