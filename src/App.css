@@ -1,1 +1,43 @@
+app {
+	overflow-y: scroll;
+}
 
+.first-section {
+	position: relative;
+	overflow: hidden;
+	box-shadow: inset 0px -120px 30px 15px rgba(0, 0, 0, 0.75);
+}
+
+.first-section::before {
+	content: '';
+	background-image: url('/src/images/festival-bg.avif');
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	top: -10%;
+	left: -10%;
+	width: 120%;
+	height: 120%;
+	filter: brightness(20%) blur(4px);
+	z-index: -1;
+}
+
+.second-section {
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.second-section::before {
+	content: '';
+	background-image: url('/src/images/background-tile.webp');
+	background-position: center;
+	background-repeat: repeat;
+	position: absolute;
+	top: -10%;
+	left: -10%;
+	width: 120%;
+	height: 120%;
+	filter: brightness(20%) blur(4px);
+	z-index: -1;
+}
