@@ -2,7 +2,14 @@
 export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				'montse-var': ['Montserrat Variable', 'sans-serif'],
+			},
+			boxShadow: {
+				'custom-shadow': 'inset 0px -120px 30px 15px rgba(0, 0, 0, 0.75)',
+			},
+		},
 	},
 	plugins: [],
 }
