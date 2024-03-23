@@ -1,10 +1,6 @@
 .first-section::before {
 	content: '';
-	background-image: url('/src/images/festival-bg.avif');
-	background-position: center;
-	background-size: cover;
-	position: absolute;
-	top: -10%;
+ 	top: -10%;
 	left: -10%;
 	width: 120%;
 	height: 120%;
