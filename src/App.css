@@ -8,12 +8,6 @@
 	z-index: -1;
 }
 
-.second-section {
-	height: 100vh;
-	position: relative;
-	overflow: hidden;
-}
-
 .second-section::before {
 	content: '';
 	background-image: url('/src/images/background-tile.webp');

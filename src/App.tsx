@@ -9,7 +9,7 @@ function App() {
         </header>
         <div></div>
       </section>
-      <section className='second-section'></section>
+      <section className='second-section h-screen overflow-hidden relative'></section>
     </div>
   )
 }
