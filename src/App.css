@@ -1,11 +1,44 @@
+.hero-section {
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.hero-section::before {
+	content: '';
+	background-position: center;
+	background-size: cover;
+	width: 120%;
+	height: 120%;
+	position: absolute;
+}
+
+.content-section {
+	min-height: 100vh;
+}
+
+/* .first-section {
+	height: 100vh;
+	overflow: hidden;
+}
+
 .first-section::before {
 	content: '';
- 	top: -10%;
+	background-image: url('/src/images/festival-bg.avif');
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	top: -10%;
 	left: -10%;
 	width: 120%;
 	height: 120%;
-	filter: brightness(20%) blur(4px);
+	filter: brightness(20%) blur(4px); 
 	z-index: -1;
+}
+
+.second-section {
+	height: 100vh;
+	overflow: hidden;
 }
 
 .second-section::before {
@@ -21,3 +54,4 @@
 	filter: brightness(20%) blur(4px);
 	z-index: -1;
 }
+ */
