@@ -1,18 +1,3 @@
-.hero-section {
-	height: 100vh;
-	position: relative;
-	overflow: hidden;
-}
-
-.hero-section::before {
-	content: '';
-	background-position: center;
-	background-size: cover;
-	width: 120%;
-	height: 120%;
-	position: absolute;
-}
-
 .content-section {
 	min-height: 100vh;
 }
