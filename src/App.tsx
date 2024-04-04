@@ -1,4 +1,5 @@
 import './App.css'
+import NormalBtn from './components/NormalBtn'
 import musicLogo from './images/logo2.jpeg'
 import pageLogo from './images/page-logo.jpeg'
 
@@ -10,17 +11,17 @@ function App() {
           <img src={pageLogo} alt='logo' />
         </div>
         <div className='flex gap-6'>
-          <div className='w-52 h-52'>
+          <div className='w-60 h-60'>
             <img src={musicLogo} alt='music logo' />
           </div>
-          <div className='flex flex-col justify-center gap-8'>
+          <div className='flex flex-col justify-center gap-12'>
             <div>
-              <h1 className='text-xl text-white'>StarJam</h1>
-              <h2 className=''>Denis</h2>
+              <h1 className='text-4xl text-border font-bold uppercase tracking-widest'>StarJam</h1>
+              <h2 className='text-2xl text-white uppercase font-bold'>Denis</h2>
             </div>
-            <div>
-              <button>Listen Now</button>
-              <button>Share</button>
+            <div className='flex gap-2'>
+              <NormalBtn text='Listen Now' bgColor={true} />
+              <NormalBtn text='Share' bgColor={false} />
             </div>
           </div>
         </div>
