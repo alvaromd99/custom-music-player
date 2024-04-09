@@ -1,10 +1,6 @@
-.content-section {
-	min-height: 100vh;
-}
-
 .text-border {
-  -webkit-text-stroke: 1px white;
-  color: transparent;
+	-webkit-text-stroke: 1px white;
+	color: transparent;
 }
 
 /* .first-section {
