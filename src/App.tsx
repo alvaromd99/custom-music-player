@@ -1,4 +1,5 @@
 import './App.css'
+import LinksList from './components/LinksList'
 import NormalBtn from './components/NormalBtn'
 import musicLogo from './images/logo2.jpeg'
 import pageLogo from './images/page-logo.jpeg'
@@ -10,7 +11,7 @@ function App() {
 				<div className='fixed left-8 top-10 w-8 h-8'>
 					<img src={pageLogo} alt='logo' />
 				</div>
-				<div className='flex flex-col gap-10'>
+				<div className='flex flex-col gap-6'>
 					<div className='flex gap-6'>
 						<div className='w-60 h-60'>
 							<img src={musicLogo} alt='music logo' />
@@ -30,11 +31,11 @@ function App() {
 							</div>
 						</div>
 					</div>
-					<div className='flex'>
-						<h3>Stream it your way</h3>
-						<ul>
-							<li>SoundCloud</li>
-						</ul>
+					<div className='flex flex-col gap-4'>
+						<h3 className='text-3xl font-bold text-white uppercase'>
+							Stream it your way
+						</h3>
+						<LinksList />
 					</div>
 				</div>
 			</section>
