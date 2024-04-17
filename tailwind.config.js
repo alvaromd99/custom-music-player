@@ -8,6 +8,7 @@ export default {
 			},
 			boxShadow: {
 				'custom-shadow': 'inset 0px -80px 30px 15px rgba(0, 0, 0, 0.95)',
+				'custom-shadow-2': 'inset 1px -51px 79px 79px rgba(0,0,0,0.95)',
 			},
 			backgroundImage: {
 				'hero-image': "url('/src/images/logo2.jpeg')",
@@ -17,10 +18,13 @@ export default {
 				20: '20%',
 			},
 			width: {
-				120: '120%',
+				105: 'calc(100vw + 2rem)',
 			},
 			height: {
-				120: '120%',
+				105: 'calc(100vh + 2rem)',
+			},
+			top: {
+				105: '5%',
 			},
 			zIndex: {
 				neg: '-1',
