@@ -31,7 +31,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-14">
+          <div className="flex flex-col gap-6">
             <h3 className="text-4xl font-bold text-white uppercase">
               Stream it your way
             </h3>
