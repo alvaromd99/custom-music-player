@@ -7,7 +7,7 @@ import pageLogo from './images/page-logo.jpeg'
 function App() {
   return (
     <div className="font-montse-var">
-      <div className="fixed left-8 top-10 h-8 w-8">
+      <div className="fixed left-10 top-10 h-14 w-14">
         <img src={pageLogo} alt="logo" />
       </div>
       <section className="hero-section relative h-screen overflow-hidden px-big pt-48 before:absolute before:-left-4 before:-top-4 before:z-neg before:h-105 before:w-105 before:bg-hero-image before:bg-cover before:bg-center before:shadow-custom-shadow-2 before:blur-sm before:brightness-20">

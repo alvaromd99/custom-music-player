@@ -6,13 +6,13 @@ export default function LinksList() {
   return (
     <ul className="flex">
       <li className="flex justify-center items-center w-16 h-16 outline-white outline-1 outline">
-        <AppleIcon />
+        <AppleIcon dimensions="1.5em" />
       </li>
       <li className="flex justify-center items-center w-16 h-16 outline-white outline-1 outline">
-        <SpotifyIcon />
+        <SpotifyIcon dimensions="1.5em" />
       </li>
       <li className="flex justify-center items-center w-16 h-16 outline-white outline-1 outline">
-        <YoutubeIcon />
+        <YoutubeIcon dimensions="1.5em" />
       </li>
     </ul>
   )
