@@ -10,15 +10,15 @@ export default function Song({ audio, number }: SongProps) {
   console.log(number)
 
   const handleClick = () => {
-    if (audioRef.current) {
-      audioRef.current.play()
-    }
+    if (!audioRef.current) return
+
+    audioRef.current?.play()
   }
 
   return (
     <div onClick={handleClick}>
       Play
-      <audio src={audio} ref={audioRef} />
+      <audio src={audio} />
     </div>
   )
 }
