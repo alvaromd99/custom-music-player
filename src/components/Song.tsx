@@ -7,6 +7,7 @@ interface SongProps {
 
 export default function Song({ audio, number }: SongProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null)
+  console.log(number)
 
   const handleClick = () => {
     if (audioRef.current) {
