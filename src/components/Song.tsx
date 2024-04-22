@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 import { PauseIcon } from "../icons/PauseIcon"
 import { PlayIcon } from "../icons/PlayIcon"
+import { ShareIcon } from "../icons/ShareIcon"
 
 interface SongProps {
   audio: string
@@ -55,7 +56,15 @@ export default function Song({ audio, number, name, author }: SongProps) {
           <p>{author}</p>
         </div>
       </div>
-      <div>{duration !== undefined ? (duration / 60).toFixed(2) : '0'}</div>
+      <div className="flex items-center gap-4">
+        <div>
+          <div>
+            {duration !== undefined ? (duration / 60).toFixed(2) : '0'}</div>
+        </div>
+        <div>
+          <ShareIcon dimensions="1.4em" />
+        </div>
+      </div>
     </div>
   )
 }
