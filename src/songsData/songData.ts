@@ -1,59 +1,64 @@
-import track1 from '../audios/chasing-the-dream.mp3'
-import track2 from '../audios/dreamland-odyssey.mp3'
-import track3 from '../audios/dreamweaver.mp3'
-import track4 from '../audios/dreamy-delight.mp3'
-import track5 from '../audios/enigmatic-pathways.mp3'
-import track6 from '../audios/ethereal-journey.mp3'
-import track7 from '../audios/ethereal-vistas.mp3'
-import track8 from '../audios/flickering-embers.mp3'
-import track9 from '../audios/infinite-horizons.mp3'
-import track10 from '../audios/luminescent-dreams.mp3'
-import track11 from '../audios/moments-of-grace.mp3'
+import track1 from '../audios/Royalty.mp3'
+import track2 from '../audios/Fearless.mp3'
+import track3 from '../audios/Fly.mp3'
+import track4 from '../audios/NoRival.mp3'
+import track5 from '../audios/Inspiration.mp3'
+import track6 from '../audios/KeepYou.mp3'
+import track7 from '../audios/LoneWolf.mp3'
+import track8 from '../audios/Lost.mp3'
+import track9 from '../audios/Pill.mp3'
+import track10 from '../audios/Stronger.mp3'
+import track11 from '../audios/UnderWater.mp3'
+import track12 from '../audios/Vessel.mp3'
 
 export const tracks = [
   {
-    name: 'Chasing the Dream',
-    artist: 'Denis',
+    name: 'Royalty',
+    artist: 'Egzod, Maestro Chives, Neoni',
     path: track1,
   }, {
-    name: 'Dreamland Odyssey',
-    artist: 'Denis',
+    name: 'Fearless',
+    artist: 'Lost Sky',
     path: track2
   }, {
-    name: 'Dreamweaver',
-    artist: 'Denis',
+    name: 'Fly',
+    artist: 'Fransis Derelle',
     path: track3,
   }, {
-    name: 'Dreamy Delight',
-    artist: 'Denis',
+    name: 'No Rival',
+    artist: 'Egzod, Maestro Chives, Alaina Cross',
     path: track4,
   }, {
-    name: 'Enigmatic Pathways',
-    artist: 'Denis',
+    name: 'Inspiration',
+    artist: 'Unknown Brain',
     path: track5,
   }, {
-    name: 'Ethereal Journey',
-    artist: 'Denis',
+    name: 'Keep You',
+    artist: 'Spektrum',
     path: track6,
   }, {
-    name: 'Ethereal Vistas',
-    artist: 'Denis',
+    name: 'Lone Wolf',
+    artist: 'Emdi x Coorby',
     path: track7,
   }, {
-    name: 'Flickering Embers',
-    artist: 'Denis',
+    name: 'Lost',
+    artist: 'Lost Sky',
     path: track8,
   }, {
-    name: 'Ifinity Horizons',
-    artist: 'Denis',
+    name: 'Pill',
+    artist: 'Heuse & Zeus x Crona',
     path: track9,
   }, {
-    name: 'Luminescent Dreams',
-    artist: 'Denis',
+    name: 'Stronger',
+    artist: 'Prismo',
     path: track10,
   }, {
-    name: 'Moments of Grace',
-    artist: 'Denis',
+    name: 'Under Water',
+    artist: 'Fareoh',
     path: track11,
+  }, {
+    name: 'Vessel',
+    artist: 'Ship Wrek, Zookeeers & Tauzers',
+    path: track12,
   }
 ]
