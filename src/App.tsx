@@ -2,6 +2,7 @@ import './App.css'
 import LinksList from './components/LinksList'
 import MusicPlayer from './components/MusicPlayer'
 import Presentation from './components/Presentation'
+import VideoPlayer from './components/VideoPlayer'
 import pageLogo from './images/page-logo.jpeg'
 
 function App() {
@@ -22,7 +23,12 @@ function App() {
         </div>
       </section>
       <section className='relative h-screen overflow-hidden px-big pt-10 before:absolute before:-left-4 before:-top-4 before:z-neg before:h-105 before:w-105 before:bg-content-image before:bg-cover before:bg-center before:shadow-custom-shadow-2 before:brightness-20'>
-        <MusicPlayer />
+        <section>
+          <MusicPlayer />
+        </section>
+        <section>
+          <VideoPlayer />
+        </section>
       </section>
     </div >
   )
