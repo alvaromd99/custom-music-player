@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         'montse-var': ['Montserrat Variable', 'sans-serif'],
+        'robo-mono-var': ['Roboto Mono Variable', 'monospace'],
       },
       boxShadow: {
         'custom-shadow': 'inset 0px -80px 30px 15px rgba(0, 0, 0, 0.95)',

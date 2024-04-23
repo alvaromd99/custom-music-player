@@ -12,7 +12,7 @@ export default function Presentation() {
       </div>
       <div className="flex flex-col justify-center gap-12">
         <div>
-          <Title title='Starjam' subtitle='Denis' />
+          <Title title='NCS' subtitle='No Copyright Sound' />
         </div>
         <div className="flex gap-2">
           <NormalBtn text="Listen Now" bgColor={true} icon={<PlayIcon dimensions='1em' />} />
