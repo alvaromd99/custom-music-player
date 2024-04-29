@@ -34,6 +34,7 @@ export default function Song({ audio, number, name, author }: SongProps) {
 
   const handleClick = () => {
     if (!audioRef.current) return
+    audioRef.current.volume = 0.2
 
     if (isPlaying) {
       audioRef.current.pause()
