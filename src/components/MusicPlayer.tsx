@@ -28,7 +28,6 @@ export default function MusicPlayer() {
       <div className="flex flex-col gap-6">
         {tracks.map((track, index) => (
           <Song
-            currentSong={currentSong}
             audio={track.path}
             number={index}
             name={track.name}
@@ -36,6 +35,7 @@ export default function MusicPlayer() {
             key={index}
             onPlay={handlePlay}
             isPlaying={isPlaying}
+            currentSong={currentSong}
           />
         ))}
       </div>
