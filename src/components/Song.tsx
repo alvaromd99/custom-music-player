@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { PauseIcon } from '../icons/PauseIcon'
 import { PlayIcon } from '../icons/PlayIcon'
 import { ShareIcon } from '../icons/ShareIcon'
+import { volume } from '../constants/songData'
 
 interface SongProps {
 	audio: string
@@ -24,6 +25,7 @@ export default function Song({
 
 	const handleLoadedMetaData = useCallback(() => {
 		if (audioRef.current) {
+			audioRef.current.volume = volume
 			setDuration(audioRef.current.duration)
 		}
 	}, [])
@@ -48,6 +50,7 @@ export default function Song({
 					onClick={() => {
 						if (audioRef.current) {
 							onPlay(audioRef.current)
+							setIsPlaying(!isPlaying)
 						}
 					}}
 				>

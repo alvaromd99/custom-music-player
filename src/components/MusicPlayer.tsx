@@ -1,5 +1,5 @@
 import Song from './Song'
-import { tracks } from '../songsData/songData'
+import { tracks } from '../constants/songData'
 import { useState } from 'react'
 
 export default function MusicPlayer() {
