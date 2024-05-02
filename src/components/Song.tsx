@@ -21,7 +21,7 @@ export default function Song({
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const [duration, setDuration] = useState<number | undefined>(0)
 
-  const { currentSong, isPlaying, handlePlay } = useAudioStore()
+  const { currentSong, isPlaying, play, pause } = useAudioStore()
 
   const handleLoadedMetaData = useCallback(() => {
     if (audioRef.current) {
@@ -43,7 +43,11 @@ export default function Song({
 
   const handleClick = () => {
     if (audioRef.current) {
-      handlePlay(audioRef.current)
+      if (isPlaying && currentSong === audioRef.current) {
+        pause()
+      } else {
+        play(audioRef.current)
+      }
     }
   }
 

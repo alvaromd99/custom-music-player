@@ -2,38 +2,27 @@ import { create } from "zustand"
 
 interface AudioStore {
   currentSong: HTMLAudioElement | null,
-  changeCurrentSong: (newSong: HTMLAudioElement) => void,
   isPlaying: boolean,
-  changePlayingState: (newPlayState: boolean) => void,
-  handlePlay: (audioReference: HTMLAudioElement) => void
+  play: (audioReference: HTMLAudioElement) => void,
+  pause: () => void,
 }
 
-const useAudioStore = create<AudioStore>((set, get) => ({
+const useAudioStore = create<AudioStore>((set) => ({
   currentSong: null,
-  changeCurrentSong: (newSong) => set({ currentSong: newSong }),
   isPlaying: false,
-  changePlayingState: (newPlayState) => set({ isPlaying: newPlayState }),
-  handlePlay: (audioReference) => {
-    const { currentSong, changeCurrentSong, isPlaying, changePlayingState } = get()
-    if (!audioReference) return
-
-    if (!currentSong) {
+  play: (audioReference) => {
+    set(state => {
+      state.currentSong?.pause()
       audioReference.play()
-      changePlayingState(true)
-      changeCurrentSong(audioReference)
-    } else if (currentSong && currentSong !== audioReference) {
-      currentSong.pause()
-      audioReference.play()
-      changePlayingState(true)
-      changeCurrentSong(audioReference)
-    } else if (currentSong && currentSong === audioReference && !isPlaying) {
-      audioReference.play()
-      changePlayingState(true)
-    } else {
-      currentSong.pause()
-      changePlayingState(false)
-    }
-  }
+      return { currentSong: audioReference, isPlaying: true }
+    });
+  },
+  pause: () => {
+    set(state => {
+      state.currentSong?.pause()
+      return { isPlaying: false }
+    });
+  },
 }))
 
 export default useAudioStore
