@@ -55,7 +55,7 @@ export default function Song({
     <div className="flex justify-between">
       <audio src={audio} ref={audioRef} />
       <div className="flex gap-6 items-center">
-        <p>{number + 1}</p>
+        <p className='min-w-4 text-center'>{number + 1}</p>
         <div onClick={handleClick} className="cursor-pointer">
           {isPlaying && currentSong === audioRef.current ? (
             <PauseIcon dimensions="1.4em" />
