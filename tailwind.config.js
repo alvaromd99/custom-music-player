@@ -34,6 +34,15 @@ export default {
       },
       padding: {
         big: '28rem'
+      },
+      keyframes: {
+        appear: {
+          '0% 100%': { opacity: 0 },
+          '50%': { opacity: 1 }
+        }
+      },
+      animation: {
+        appear: 'appear 3s ease-in-out'
       }
     },
   },

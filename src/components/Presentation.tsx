@@ -3,22 +3,47 @@ import Title from './Title'
 import { PlayIcon } from '../icons/PlayIcon'
 import { ShareIcon } from '../icons/ShareIcon'
 import musicLogo from '../images/logo2.jpeg'
+import { useState } from 'react'
+import ShareBtn from './ShareBtn'
 
 export default function Presentation() {
-  return (
-    <div className="flex justify-between gap-16">
-      <div className="h-imageBig w-imageBig">
-        <img src={musicLogo} alt="music logo" />
-      </div>
-      <div className="flex flex-col justify-center gap-12">
-        <div>
-          <Title title='NCS' subtitle='No Copyright Sound' />
-        </div>
-        <div className="flex gap-2">
-          <NormalBtn text="Listen Now" bgColor={true} icon={<PlayIcon dimensions='1em' />} />
-          <NormalBtn text="Share" bgColor={false} icon={<ShareIcon dimensions='1em' />} />
-        </div>
-      </div>
-    </div>
-  )
+	const [copySuccess, setCopySuccess] = useState(false)
+
+	const copyToClipboard = async (text: string) => {
+		try {
+			await navigator.clipboard.writeText(text)
+			setCopySuccess(true)
+			setTimeout(() => setCopySuccess(false), 3000)
+		} catch (err) {
+			setCopySuccess(false)
+		}
+	}
+
+	console.log(copySuccess)
+
+	return (
+		<div className='flex gap-16 justify-between'>
+			<div className='h-imageBig w-imageBig'>
+				<img src={musicLogo} alt='music logo' />
+			</div>
+			<div className='flex flex-col gap-12 justify-center'>
+				<div>
+					<Title title='NCS' subtitle='No Copyright Sound' />
+				</div>
+				<div className='flex gap-2'>
+					<NormalBtn text='Listen Now' icon={<PlayIcon dimensions='1em' />} />
+					<ShareBtn
+						text='Share'
+						icon={<ShareIcon dimensions='1em' />}
+						handleClick={copyToClipboard}
+					/>
+				</div>
+			</div>
+			{copySuccess && (
+				<div className='absolute top-3 right-3 p-2 text-black bg-white opacity-0 animate-appear'>
+					Text has been copied
+				</div>
+			)}
+		</div>
+	)
 }
