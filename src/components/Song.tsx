@@ -3,78 +3,75 @@ import { PauseIcon } from '../icons/PauseIcon'
 import { PlayIcon } from '../icons/PlayIcon'
 import { ShareIcon } from '../icons/ShareIcon'
 import { volume } from '../constants/songData'
+import useAudioStore from '../store/UseAudioStore'
 
 interface SongProps {
-	audio: string
-	number: number
-	name: string
-	author: string
-	onPlay: (audioReference: HTMLAudioElement) => void
-	isPlaying: boolean
-	currentSong: HTMLAudioElement | null
+  audio: string
+  number: number
+  name: string
+  author: string
 }
 
 export default function Song({
-	audio,
-	number,
-	name,
-	author,
-	onPlay,
-	isPlaying,
-	currentSong,
+  audio,
+  number,
+  name,
+  author,
 }: SongProps) {
-	const audioRef = useRef<HTMLAudioElement | null>(null)
-	const [duration, setDuration] = useState<number | undefined>(0)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
+  const [duration, setDuration] = useState<number | undefined>(0)
 
-	const handleLoadedMetaData = useCallback(() => {
-		if (audioRef.current) {
-			audioRef.current.volume = volume
-			setDuration(audioRef.current.duration)
-		}
-	}, [])
+  const { currentSong, isPlaying, handlePlay } = useAudioStore()
 
-	useEffect(() => {
-		const audioElement = audioRef.current
-		if (!audioElement) return
+  const handleLoadedMetaData = useCallback(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = volume
+      setDuration(audioRef.current.duration)
+    }
+  }, [])
 
-		audioElement.addEventListener('loadedmetadata', handleLoadedMetaData)
+  useEffect(() => {
+    const audioElement = audioRef.current
+    if (!audioElement) return
 
-		return () => {
-			audioElement.removeEventListener('loadedmetadata', handleLoadedMetaData)
-		}
-	}, [handleLoadedMetaData])
+    audioElement.addEventListener('loadedmetadata', handleLoadedMetaData)
 
-	const handleClick = () => {
-		if (audioRef.current) {
-			onPlay(audioRef.current)
-		}
-	}
+    return () => {
+      audioElement.removeEventListener('loadedmetadata', handleLoadedMetaData)
+    }
+  }, [handleLoadedMetaData])
 
-	return (
-		<div className="flex justify-between">
-			<audio src={audio} ref={audioRef} />
-			<div className="flex gap-6 items-center">
-				<p>{number + 1}</p>
-				<div onClick={handleClick} className="cursor-pointer">
-					{isPlaying && currentSong === audioRef.current ? (
-						<PauseIcon dimensions="1.4em" />
-					) : (
-						<PlayIcon dimensions="1.4em" />
-					)}
-				</div>
-				<div>
-					<p className="font-bold">{name}</p>
-					<p>{author}</p>
-				</div>
-			</div>
-			<div className="flex gap-4 items-center">
-				<div>
-					<div>{duration !== undefined ? (duration / 60).toFixed(2) : '0'}</div>
-				</div>
-				<div>
-					<ShareIcon dimensions="1.4em" />
-				</div>
-			</div>
-		</div>
-	)
+  const handleClick = () => {
+    if (audioRef.current) {
+      handlePlay(audioRef.current)
+    }
+  }
+
+  return (
+    <div className="flex justify-between">
+      <audio src={audio} ref={audioRef} />
+      <div className="flex gap-6 items-center">
+        <p>{number + 1}</p>
+        <div onClick={handleClick} className="cursor-pointer">
+          {isPlaying && currentSong === audioRef.current ? (
+            <PauseIcon dimensions="1.4em" />
+          ) : (
+            <PlayIcon dimensions="1.4em" />
+          )}
+        </div>
+        <div>
+          <p className="font-bold">{name}</p>
+          <p>{author}</p>
+        </div>
+      </div>
+      <div className="flex gap-4 items-center">
+        <div>
+          <div>{duration !== undefined ? (duration / 60).toFixed(2) : '0'}</div>
+        </div>
+        <div>
+          <ShareIcon dimensions="1.4em" />
+        </div>
+      </div>
+    </div>
+  )
 }
