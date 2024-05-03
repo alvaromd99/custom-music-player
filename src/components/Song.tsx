@@ -21,7 +21,7 @@ export default function Song({
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const [duration, setDuration] = useState<number | undefined>(0)
 
-  const { currentSong, isPlaying, play, pause } = useAudioStore()
+  const { currentSong, isPlaying, play, pause, setFirstSong } = useAudioStore()
 
   const handleLoadedMetaData = useCallback(() => {
     if (audioRef.current) {
@@ -40,6 +40,12 @@ export default function Song({
       audioElement.removeEventListener('loadedmetadata', handleLoadedMetaData)
     }
   }, [handleLoadedMetaData])
+
+  useEffect(() => {
+    if (number === 0 && audioRef.current) {
+      setFirstSong(audioRef.current)
+    }
+  }, [])
 
   const handleClick = () => {
     if (audioRef.current) {
