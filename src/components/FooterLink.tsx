@@ -4,7 +4,7 @@ interface FooterLinkProps {
 }
 export default function FooterLink({ text, url }: FooterLinkProps) {
   return (
-    <a href={url}>
+    <a href={url} className="uppercase font-bold">
       <div>{text}</div>
     </a>
   )

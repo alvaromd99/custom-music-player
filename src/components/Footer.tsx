@@ -2,7 +2,7 @@ import FooterLink from "./FooterLink";
 
 export default function Footer() {
   return (
-    <footer className="grid-rows-3 border-y-2 border-solid border-white py-14">
+    <footer className="grid grid-cols-3 gap-3 border-y-2 border-solid border-white py-14">
       <div>
         <FooterLink text="About monstercat" url="" />
         <FooterLink text="Contact us" url="" />
