@@ -18,8 +18,6 @@ export default function Presentation() {
     }
   }
 
-  console.log(copySuccess)
-
   return (
     <div className='flex gap-16 justify-between'>
       <div className='h-imageBig w-imageBig'>
