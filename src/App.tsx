@@ -14,7 +14,7 @@ function App() {
       <div className='fixed left-10 top-10 h-14 w-14'>
         <img src={pageLogo} alt='logo' />
       </div>
-      <div className='fixed right-10 top-10'>
+      <div className='fixed right-10 top-14 z-10'>
         <LinksList outline={false} column={true} dimensions={1.5} />
       </div>
       <section className='relative h-screen overflow-hidden px-10 pt-48 before:absolute before:-left-4 before:-top-4 before:z-neg before:h-105 before:w-105 before:bg-hero-image before:bg-cover before:bg-center before:shadow-custom-shadow-2 before:blur-sm before:brightness-20 md:px-32 lg:px-40 xl:px-52 2xl:px-big'>

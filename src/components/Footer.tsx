@@ -18,7 +18,8 @@ export default function Footer() {
           <FooterLink text="Privacy policy" url="" />
         </div>
         <div>
-          <NewsLetter /></div>
+          <NewsLetter />
+        </div>
       </div>
       <div className="flex justify-between items-center">
         <p>2011 - 2024 © Monstercat, All Rights Reserved</p>
