@@ -28,7 +28,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className='relative min-h-screen overflow-hidden px-10 py-10 text-white before:absolute before:left-0 before:top-0 before:z-neg before:h-full before:w-full before:bg-content-image before:bg-cover before:bg-center before:shadow-custom-shadow-2 before:brightness-20 md:px-32 lg:px-40 xl:px-52 2xl:px-big'>
+      <section className='relative min-h-screen overflow-hidden px-10 py-10 text-white before:absolute before:left-0 before:top-0 before:z-neg before:h-full before:w-full before:bg-content-image before:bg-scroll before:bg-center before:bg-repeat before:brightness-20 md:px-32 lg:px-40 xl:px-52 2xl:px-big'>
         <section className='mb-20'>
           <MusicPlayer />
         </section>

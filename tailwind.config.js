@@ -38,11 +38,12 @@ export default {
       keyframes: {
         appear: {
           '0% 100%': { opacity: 0 },
-          '50%': { opacity: 1 }
+          '20%': { opacity: 1 },
+          '80%': { opacity: 1 }
         }
       },
       animation: {
-        appear: 'appear 3s ease-in-out'
+        appear: 'appear 4s ease-in-out'
       }
     },
   },

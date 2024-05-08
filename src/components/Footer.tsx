@@ -1,5 +1,6 @@
 import FooterLink from "./FooterLink";
 import LinksList from "./LinksList";
+import NewsLetter from "./NewsLetter";
 
 export default function Footer() {
   return (
@@ -16,10 +17,11 @@ export default function Footer() {
           <FooterLink text="Terms of service" url="" />
           <FooterLink text="Privacy policy" url="" />
         </div>
-        <div></div>
+        <div>
+          <NewsLetter /></div>
       </div>
       <div className="flex justify-between items-center">
-        <div></div>
+        <p>2011 - 2024 © Monstercat, All Rights Reserved</p>
         <LinksList outline={false} column={false} dimensions={1.5} />
       </div>
     </footer >
