@@ -3,6 +3,9 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      screens: {
+        'mobile': '425px'
+      },
       fontFamily: {
         'montse-var': ['Montserrat Variable', 'sans-serif'],
         'robo-mono-var': ['Roboto Mono Variable', 'monospace'],
@@ -20,6 +23,7 @@ export default {
       },
       width: {
         imageBig: '26rem',
+        imageSmall: '23.8rem',
         105: 'calc(100vw + 2rem)',
       },
       height: {

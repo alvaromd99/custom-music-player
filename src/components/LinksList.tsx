@@ -12,7 +12,7 @@ interface LinksListProps {
 
 export default function LinksList({ outline, dimensions, isHeader }: LinksListProps) {
   return (
-    <ul className={`flex ${isHeader ? 'flex-row gap-7 md:flex-col' : ''}`}>
+    <ul className={`flex ${isHeader ? 'flex-row gap-7 lg:flex-col' : ''}`}>
       <li className={`flex justify-center items-center w-10 h-10 z-20 ${outline ? 'outline-white outline-1 outline' : ''}`}>
         <a href="https://open.spotify.com/playlist/7sZbq8QGyMnhKPcLJvCUFD?si=a4cf1983d05b4027&nd=1&dlsi=885e344ddd284839" target="_blank">
           <SpotifyIcon dimensions={`${dimensions}em`} />
