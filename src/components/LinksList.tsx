@@ -6,13 +6,13 @@ import { YoutubeIcon } from "../icons/YoutubeIcon";
 
 interface LinksListProps {
   outline: boolean,
-  column: boolean
   dimensions: number
+  isHeader: boolean
 }
 
-export default function LinksList({ outline, column, dimensions }: LinksListProps) {
+export default function LinksList({ outline, dimensions, isHeader }: LinksListProps) {
   return (
-    <ul className={`flex ${column ? 'flex-col' : ''}`}>
+    <ul className={`flex ${isHeader ? 'flex-row md:flex-col' : ''}`}>
       <li className={`flex justify-center items-center w-16 h-16 z-20 ${outline ? 'outline-white outline-1 outline' : ''}`}>
         <a href="https://open.spotify.com/playlist/7sZbq8QGyMnhKPcLJvCUFD?si=a4cf1983d05b4027&nd=1&dlsi=885e344ddd284839" target="_blank">
           <SpotifyIcon dimensions={`${dimensions}em`} />

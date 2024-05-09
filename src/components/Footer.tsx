@@ -23,7 +23,7 @@ export default function Footer() {
       </div>
       <div className="flex justify-between items-center">
         <p>2011 - 2024 © Monstercat, All Rights Reserved</p>
-        <LinksList outline={false} column={false} dimensions={1.5} />
+        <LinksList outline={false} dimensions={1.5} isHeader={false} />
       </div>
     </footer >
   )
