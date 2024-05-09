@@ -21,12 +21,10 @@ export default {
       width: {
         imageBig: '26rem',
         105: 'calc(100vw + 2rem)',
-        92: '22rem',
       },
       height: {
         imageBig: '26rem',
         105: 'calc(100vh + 2rem)',
-        92: '22rem',
       },
       top: {
         105: '5%',

@@ -20,7 +20,7 @@ export default function NormalBtn({ text }: NormalBtnProps) {
   }
   return (
     <button
-      className='flex h-10 gap-2 items-center px-6 py-4 text-md text-center text-white font-bold bg-green-700 transition-all duration-300 outline outline-1 hover:bg-white hover:text-black hover:outline-white outline-green-700'
+      className='flex h-12 gap-2 items-center px-6 text-md text-center text-white font-bold bg-green-700 transition-all duration-300 outline outline-1 hover:bg-white hover:text-black hover:outline-white outline-green-700'
       onClick={handleClick}
     >{isPlaying && currentSong === firstSong ? (
       <p><PauseIcon dimensions="1em" /></p>) : (

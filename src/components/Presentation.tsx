@@ -20,7 +20,7 @@ export default function Presentation() {
 
   return (
     <div className='flex flex-col items-start gap-12 justify-between'>
-      <div className='w-96 h-96'>
+      <div className='w-full h-96'>
         <img src={musicLogo} alt='music logo' />
         <p className='text-white mt-3 italic'>"Creating magic, one track at a time."</p>
       </div>
