@@ -1,6 +1,5 @@
 import NormalBtn from './NormalBtn'
 import Title from './Title'
-import { ShareIcon } from '../icons/ShareIcon'
 import musicLogo from '../images/logo2.jpeg'
 import { useState } from 'react'
 import ShareBtn from './ShareBtn'
@@ -28,11 +27,10 @@ export default function Presentation() {
         <div>
           <Title title='NCS' subtitle='No Copyright Sound' />
         </div>
-        <div className='flex gap-2'>
+        <div className='flex gap-4'>
           <NormalBtn text='Listen Now' />
           <ShareBtn
             text='Share'
-            icon={<ShareIcon dimensions='1em' />}
             handleClick={copyToClipboard}
           />
         </div>
