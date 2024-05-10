@@ -24,7 +24,7 @@ function App() {
         <div className='flex flex-col gap-24'>
           <Presentation />
           <div className='flex flex-col gap-6'>
-            <h3 className='text-2xl font-bold uppercase text-white'>
+            <h3 className='text-2xl lg:text-4xl font-bold uppercase text-white'>
               Stream it your way
             </h3>
             <LinksList outline={true} dimensions={1.5} isHeader={false} />

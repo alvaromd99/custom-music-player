@@ -6,10 +6,10 @@ interface TitleProps {
 export default function Title({ title, subtitle }: TitleProps) {
   return (
     <>
-      <h1 className="text-border mb-2 font-robo-mono-var text-4xl lg:text-8xl font-bold uppercase">
+      <h1 className="text-border mb-2 font-robo-mono-var text-4xl lg:text-5xl font-bold uppercase">
         {title}
       </h1>
-      <h2 className="text-lg font-bold uppercase text-white lg:text-xl">
+      <h2 className="text-lg font-bold uppercase text-white">
         {subtitle}
       </h2>
     </>)

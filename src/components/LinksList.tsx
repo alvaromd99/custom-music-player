@@ -13,7 +13,7 @@ interface LinksListProps {
 
 export default function LinksList({ outline, dimensions, isHeader }: LinksListProps) {
   return (
-    <ul className={`flex ${isHeader ? 'flex-row gap-7 lg:flex-col' : ''}`}>
+    <ul className={`flex ${isHeader ? 'flex-row gap-7 lg:gap-0 lg:flex-col' : ''}`}>
       <ListIcon outline={outline} icon={<SpotifyIcon dimensions={`${dimensions}em`} />} />
       <ListIcon outline={outline} icon={<YoutubeIcon dimensions={`${dimensions}em`} />} />
       <ListIcon outline={outline} icon={<SoundcloudIcon dimensions={`${dimensions}em`} />} />
