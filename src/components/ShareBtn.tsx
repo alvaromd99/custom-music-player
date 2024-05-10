@@ -8,7 +8,7 @@ interface ShareBtnProps {
 export default function ShareBtn({ text, handleClick }: ShareBtnProps) {
   return (
     <button
-      className='flex h-12 gap-2 items-center px-6 text-xl text-center font-bold text-white bg-transparent transition-all duration-300 outline-white outline outline-1 hover:bg-white hover:text-black hover:outline-white'
+      className='flex h-12 items-center gap-2 bg-transparent px-6 text-center text-xl font-bold text-white outline outline-1 outline-white transition-all duration-300 hover:bg-white hover:text-black hover:outline-white lg:h-16'
       onClick={() => handleClick('hello')}
     >
       <p><ShareIcon dimensions='1em' /></p>

@@ -18,12 +18,12 @@ export default function Presentation() {
   }
 
   return (
-    <div className='flex flex-col items-start gap-12 justify-between'>
-      <div className='w-full self-center h-96 max-w-96'>
+    <div className='flex flex-col items-start gap-12 justify-between lg:flex-row lg:items-center'>
+      <div className='w-full self-center h-96 max-w-96 lg:w-96 lg:h-96'>
         <img src={musicLogo} alt='music logo' />
         <p className='text-white mt-3 italic'>"Creating magic, one track at a time."</p>
       </div>
-      <div className='flex flex-col gap-6 justify-center'>
+      <div className='flex flex-col gap-10 justify-center'>
         <div>
           <Title title='NCS' subtitle='No Copyright Sound' />
         </div>

@@ -5,7 +5,7 @@ interface ListIconProps {
 
 export default function ListIcon({ outline, icon }: ListIconProps) {
   return (
-    <li className={`flex justify-center items-center w-10 h-10 z-20 ${outline ? 'outline-white outline-1 outline' : ''}`}>
+    <li className={`flex justify-center items-center w-10 h-10 lg:w-12 lg:h-12 z-20 ${outline ? 'outline-white outline-1 outline' : ''}`}>
       <a href="https://www.facebook.com/NoCopyrightSounds/" target="_blank">
         {icon}
       </a>
