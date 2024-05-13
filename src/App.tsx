@@ -6,8 +6,7 @@ import Presentation from './components/Presentation'
 import VideoPlayer from './components/VideoPlayer'
 import pageLogo from './images/page-logo.jpeg'
 
-// TODO Make mobile first and them adjust the rest
-// TODO Make list icon component
+// TODO make xl 
 
 function App() {
   return (
@@ -24,14 +23,14 @@ function App() {
         <div className='flex flex-col gap-24'>
           <Presentation />
           <div className='flex flex-col gap-6'>
-            <h3 className='text-2xl lg:text-4xl font-bold uppercase text-white'>
+            <h3 className='text-2xl lg:text-4xl font-bold uppercase text-white xl:text-5xl'>
               Stream it your way
             </h3>
             <LinksList outline={true} dimensions={1.5} isHeader={false} />
           </div>
         </div>
       </section>
-      <section className='relative min-h-screen overflow-hidden px-6 pb-10 text-white before:absolute before:left-0 before:top-0 before:z-neg before:h-full before:w-full before:bg-content-image before:bg-scroll before:bg-center before:bg-repeat before:brightness-20 md:px-32 xl:px-52 2xl:px-big lg:px-28 mobile:px-16'>
+      <section className='relative min-h-screen overflow-hidden px-6 pb-10 text-white before:absolute before:left-0 before:top-0 before:z-neg before:h-full before:w-full before:bg-content-image before:bg-scroll before:bg-center before:bg-repeat before:brightness-20 md:px-32 xl:px-52 2xl:px-big lg:px-28 mobile:px-16 xl:pt-10'>
         <section className='mb-20'>
           <MusicPlayer />
         </section>

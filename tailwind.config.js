@@ -22,12 +22,12 @@ export default {
         20: '20%',
       },
       width: {
-        imageBig: '26rem',
+        imageBig: '28rem',
         imageSmall: '23.8rem',
         105: 'calc(100vw + 2rem)',
       },
       height: {
-        imageBig: '26rem',
+        imageBig: '28rem',
         105: 'calc(100vh + 2rem)',
       },
       top: {
